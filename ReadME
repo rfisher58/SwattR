@@ -1,0 +1,48 @@
+Fly Swatter is an online open source web app that allows people to post coding bugs, problems etc. You can create issues which will be loaded into yourIssues DB for people can accept to fix. These will be held on your personal account page, and displayed on the Fly Swatter homepage for people to fix. 
+
+
+UI
+
+	- There will be jumbotron up top where you can navigate between the home page, your accounts page and whatever else. 
+	- There will be a filter bar
+	- The home page will have current postings which displayed with bootstrap cards. 
+		○ Cards 
+			§ Cards will display code snippets, Github repository's, or downloadable links with Dropbox. 
+			§ There will be an image of the type of link us used above or something else. 
+			§ Display issues cost 
+			§ Display issue due date
+			
+			
+			Screen clipping taken: 10/29/2018 1:01 PM
+			
+			
+			§ Display issue post date
+			§ Display issue poster
+			§ Display the languages used for the current code
+			§ If you click on the card it takes you to the issue post page 
+		○ Filter
+			§ Probably a drop down or a series of dropdowns
+			§ Can filter cost, languages,  due dates, postdate and whatever else.
+		○ Issue post page (from the fixer)
+			§ Where you can see everything the card displays plus ..
+				□ Poster info and reviews 
+				□ Large description of what needs to be fixed 
+				□ Am accept button which displays a modal that ask if you are sure you would like to take on said bug. Then displays a terms and conditions saying you cannot steal code. 
+			§ Once bug is accepted it will be moved to your tasks page. After accepting the task, a submit button will appear for you to submit the code you have fixed. 
+			§ Once submitted the poster will receive an alert that it is fixed and will prompt you to pay the fixer.
+		 
+		○ Personal account page 
+			§ Displays your account info 
+			§ Displays your current tasks out for fix that have not been accepted 
+			§ Displays your old tasks that have been submitted and completed 
+			§ Displays tasks that have been accepted for fixing and you are waiting on
+			§ Displays tasks you have taken on for fixing that are completed 
+			§ Displays tasks you have taken on for fixing that are in process
+
+Back end 
+
+	There will be a series of databases used to store all the tasks and their current progression. 
+	SQL - I think will be the best for its use of tables and my current understanding of it 
+	
+	As for something new… not entirely sure, maybe Auth0 for two factor authentication for the users. 
+	

@@ -1,0 +1,22 @@
+.navbar{
+    background-color:red;
+    height: 100px;
+
+}
+
+.navbaritem{
+    text-decoration: none;
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 35px;
+}
+
+#home {
+    margin-left: none;
+    padding-left: 50px;
+    padding-bottom: none;
+    padding-right: 25px;
+}
+
+/* rgb(81, 201, 81); */
+
