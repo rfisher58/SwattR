@@ -1,0 +1,34 @@
+.navBar{
+    background-color:rgb(68, 197, 68);
+    height: 100px;
+}
+
+.page {
+    margin-left: none;
+    margin-right: none;
+    padding-left: none;
+    padding-right: none;
+}
+
+.navbaritem{
+    text-decoration: none;
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 35px;
+}
+
+#home {
+    margin-left: none;
+    padding-left: 50px;
+    padding-bottom: none;
+    padding-right: 25px;
+}
+
+/* rgb(81, 201, 81); */
+
+
+.bugs {
+   height: 200px;
+
+}
+

@@ -5,10 +5,21 @@ $.get('/api/openBugs').then(function(data){
     // console.log(data);
     for(i = 0; i < data.length; i++){
         console.log(data[i]);
-    let dataCard = $(`<div class = "card" style = "width: 18rem;"><p class = "card-title" id = "title">${data[i].title}</p><p class = "card-title" id = "title">${data[i].title}</p><p class = "card-text" id = "description">${data[i].description}</p><a href="${data[i].link}" class="btn btn-primary" id = "link" >See code</a><p class = "card-text" id = "pay" >${data[i].pay}</p></div>`);
+    let dataCard = $(`<div class = "card bugs"><p class = "card-title" id = "title">${data[i].title}</p><p class = "card-text" id = "description">${data[i].description}</p><a href="${data[i].link}" class="btn btn-primary" id = "link" >See code</a><p class = "card-text" id = "pay" >${data[i].pay}</p></div>`);
         $('#cardRow').append(dataCard);
     }
 })
+
+$.get('/api/openBugs').then(function(data){
+    // console.log(data);
+    for(i = 0; i < data.length; i++){
+        console.log(data[i]);
+    let dataCard = $(`<div class = "card bugs"><p class = "card-title" id = "title">${data[i].title}</p><p class = "card-text" id = "description">${data[i].description}</p><button type="button" class="btn btn-danger deleteBug" id = "${data[i].id}" >Delete</button><a href="${data[i].link}" class="btn btn-primary" id = "link" >See code</a><p class = "card-text" id = "pay" >${data[i].pay}</p></div>`);
+        $('#cardAccountRow').append(dataCard);
+    }
+})
+
+
 
     $('#bug').on('click', function(){
         $('#bugModal').modal();
@@ -45,6 +56,16 @@ $.get('/api/openBugs').then(function(data){
             
           )
 
+          $.post('/api/openBugs', newBug, function(data){
+            console.log("this is working"); 
+
+            console.log(newBug);
+           let finishedCard = renderAccountCard();
+           $('#cardAccountRow').append(finishedCard);
+        }
+        
+      )
+
 
           const renderCard = function(newBug){
               console.log('rendering card');
@@ -53,15 +74,38 @@ $.get('/api/openBugs').then(function(data){
               let description = $('#bug-description').val();
               let link = $('#codeLink').val();
               let pay = $('#pay').val();
-              let card = $(`<div class = "card" style = "width: 18rem;"><p class = "card-title" id = "title">${title}</p><p class = "card-title" id = "title">${title}</p><p class = "card-text" id = "description">${description}</p><a href="${link}" class="btn btn-primary" id = "link" >See code</a><p class = "card-text" id = "pay" >${pay}</p></div>`);
+              let card = $(`<div class = "card bugs"><p class = "card-title" id = "title">${title}</p><p class = "card-text" id = "description">${description}</p><a href="${link}" class="btn btn-primary" id = "link" >See code</a><p class = "card-text" id = "pay" >${pay}</p></div>`);
             return card;
+
+        }
+
+            const renderAccountCard = function(newBug){
+                console.log('rendering card');
+                let id = newBug[i].id;
+                let title = $('#bug-title').val();
+                let description = $('#bug-description').val();
+                let link = $('#codeLink').val();
+                let pay = $('#pay').val();
+                let card = $(`<div class = "card bugs"><p class = "card-title" id = "title">${title}</p><p class = "card-text" id = "description">${description}</p><a href="${link}" class="btn btn-primary" id = "link" >See code</a><button type="button" class="btn btn-danger deleteBug" id =${id} >Delete</button><p class = "card-text" id = "pay" >${pay}</p></div>`);
+              return card;
 
 
         }
 
+    
 
 
-    })
+
+    });
+
+
+});
+
+
+$('#cardAccountRow').on('click', '.deleteBug', function(event){
+    event.preventDefault();
+    console.log($(this).attr('id'));
+    
 })
 
 
@@ -80,26 +124,6 @@ $.get('/api/openBugs').then(function(data){
 
 
 
-
-
-// const renderBugs = function(){
-//     console.log(bugArray)
-// }
-
-
-// $.ajax ({
-//     url: '/api/bugs',
-//     method: "GET"
-// }).then (function(response){
-//    console.log(response);
-// })
-
-
-// $("#bug").on("click", function(){
-
-//     $('#bugModal').modal()
-
-// });
 
 
 

@@ -29,6 +29,21 @@ app.post('/api/openBugs', function(req, res) {
   });
 
 
+  app.delete('/api/openBugs/:id', function(req, res){
+      db.openBugs.destroy({
+        where: {id: req.params.id}
+      }).then(function(){
+        res.json({success: true});
+      }).catch(function(){
+        res.json({error: error});
+      });
+
+     
+      })
+  
+  
+
+
 
   
   
