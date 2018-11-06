@@ -29,9 +29,10 @@
 
 .bugs {
    width: 250px;
-   height: auto;
+   height: 150px;
    border-color: rgb(202, 194, 194);
    margin: 10px;
+   overflow: scroll;
 }
 
 .card-title{
@@ -53,3 +54,6 @@
     border-color:  rgb(68, 197, 68);
 }
 
+.card {
+    display: inline-table;
+}

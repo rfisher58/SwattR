@@ -1,84 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
     <link rel="stylesheet" href="css/home.css">
-    
+
 </head>
+
 <body>
-    <div class = "container">
+    <div class="container">
 
-<!-- Modal -->
-    <div class="modal fade" id="bugModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Bug</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                    <form>
+        <!-- Modal -->
+        <div class="modal fade" id="bugModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Bug</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
                             <div class="form-group">
-                              <label for="bug-title" class="col-form-label">Bug Title</label>
-                              <input type="text" class="form-control" id="bug-title">
-                            </div>
-                            <div class="form-group">
-                              <label for="bug-description" class="col-form-label">Provide bug description</label>
-                              <textarea class="form-control" id="bug-description"></textarea>
-                            </div>
-                             <div class="form-group">
-                              <label for="code-link" class="col-form-label">Link to your code</label>
-                              <input type="text" class="form-control" id="codeLink">
+                                <label for="bug-title" class="col-form-label">Bug Title</label>
+                                <input type="text" class="form-control" id="bug-title">
                             </div>
                             <div class="form-group">
-                              <label for="code-link" class="col-form-label">Pay</label>
-                              <input type="number" class="form-control" id="pay">
+                                <label for="bug-description" class="col-form-label">Provide bug description</label>
+                                <textarea class="form-control" id="bug-description"></textarea>
                             </div>
-                          </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" id = "postBug" class="btn btn-primary">Post New Bug</button>
+                            <div class="form-group">
+                                <label for="code-link" class="col-form-label">Link to your code</label>
+                                <input type="link" class="form-control" id="codeLink">
+                            </div>
+                            <div class="form-group">
+                                <label for="pay" class="col-form-label">Pay</label>
+                                <input type="number" class="form-control" id="pay">
+                            </div>
+                            <div class="form-group">
+                                <label for="Due-date" class="col-form-label">Due Date</label>
+                                <input type="text" class="form-control" id="Due-date">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" id="postBug" class="btn btn-primary">Post New Bug</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div>
-        <nav class="navbar navbar-expand-lg navBar">
-            <a class="navbar-brand navbaritem" href="./home.html" id = "home">Home</a>
-            <a class = "navbar-brand navbaritem" id = "bug">New Bug</a>
-            <a class="navbar-brand navbaritem" href = "./account.html" id = "Account">Account</a>
-            <a class="navbar-brand navbaritem" href = "./login.html" id = "Login">Login</a>
-        </nav>
-    </div>
-    <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-<script src = "js/container.js"></script>
-
-<!--Card loading area-->
-
-<div class ="container">
-    
-    <div class="row">
-        <div class="tablecontainer" id="cardAccountRow">
-        
+        <div>
+            <nav class="navbar navbar-expand-lg navBar">
+                <a class="navbar-brand navbaritem" href="./home.html" id="home">Home</a>
+                <a class="navbar-brand navbaritem" id="bug">New Bug</a>
+                <a class="navbar-brand navbaritem" href="./account.html" id="Account">Account</a>
+               
         </div>
-    </div>
 
-        
 
-    </div>
+        <!--Card loading area-->
+
+        <div class="container">
+
+            <div class="row">
+                <div class="tablecontainer" id="cardAccountRow">
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+        <script src="js/container.js"></script>
+        <script type="text/javascript" src="node_modules/auth0-js/build/auth0.js"></script>
 </body>
+
 </html>

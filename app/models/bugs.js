@@ -21,6 +21,20 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
           },
+
+          user: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          },
+
+          dueDate: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          },
+          postDate: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          }
       });
   
       return openBugs;
